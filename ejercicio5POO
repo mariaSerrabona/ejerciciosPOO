@@ -1,0 +1,39 @@
+#Declaracion de Clases
+class Alumno:
+    nombre=""
+    ncta=""
+    mat=None
+
+    def __init__(self,nombre,ncta):
+        self.nombre=nombre
+        self.ncta=ncta
+
+    def getNombre(self):
+        return self.nombre
+
+    def getNCTA(self):
+        return self.ncta
+
+    def setMaterias(self,mat):
+        self.mat=Materias(mat)
+
+    def getMaterias(self):
+        return self.mat.getMat()
+
+class Materias:
+
+    def __init__(self,arreglo):
+        self.arreglo=arreglo
+
+    def getMat(self):
+        lista=""
+        for i in range(0,len(self.arreglo)):
+            lista=lista+self.arreglo[i]+"\n"
+        return lista
+#Programa Principal
+al1 = Alumno("Luis","09090")
+m1=["Calculo","Programacion","Electronica"]
+al1.setMaterias(m1)
+print ("Nombre: "+al1.getNombre())
+print ("No Cuenta: "+al1.getNCTA())
+print ("Materias: "+al1.getMaterias())
