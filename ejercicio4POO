@@ -1,0 +1,36 @@
+#Declaracion de Clases
+class Profesor:
+    def __init__(self,nombre):
+        self.nombre=nombre
+
+    def getNombre(self):
+        return self.nombre
+
+    def enseno(self,mat):
+        print ("Enseño "+mat)
+
+class Investigador:
+    def __init__(self,nombre):
+        self.nombre=nombre
+
+    def getNombre(self):
+        return self.nombre
+
+    def investigo(self,inv):
+        print ("Investigo "+inv)
+
+class Prof_Inv(Profesor,Investigador):
+    def __init__(self,nombre):
+        self.nombre=nombre
+
+#Programa Principal
+Profesor= Profesor("Raul")
+print ("Soy "+Profesor.getNombre())
+Profesor.enseno("Calculo")
+Investigador = Investigador("Laura")
+print ("Soy "+Investigador.getNombre())
+Investigador.investigo("Teoria de Grafos")
+Prof_Inv= Prof_Inv("Humberto")
+print ("Soy "+Prof_Inv.getNombre())
+Prof_Inv.enseno("Inteligencia Artificial")
+Prof_Inv.investigo("Realidad Virtual")
